@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Мой учебный прогресс</title>
+    <link rel="stylesheet" href="../styles/diary.css">
+</head>
+
+<body class="page">
+    <header class="header" role="banner">
+        <div class="container header__content">
+            <h1 class="header__title">Мой учебный прогресс</h1>
+            <p class="header__subtitle">Отслеживай пройденные задания и текущие курсы</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index_dop.html" class="navbar__logo">PinqWest</a>
+
+            <button class="navbar__toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="navbar__menu" id="navMenu">
+                <li><a href="index_dop.html">Главная</a></li>
+                <li><a href="projects.html">Проекты</a></li>
+                <li><a href="diary.html" class="active">Дневник</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="izo.html">Изображение</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main" id="main" tabindex="-1">
+        <section class="container" aria-labelledby="timeline-title">
+            <h2 id="timeline-title" class="section-title">Хронология обучения</h2>
+
+            <div class="timeline" id="timeline" aria-live="polite" aria-relevant="additions">
+                <!-- timeline items -->
+                <article class="timeline__item" data-date="15 дек" aria-labelledby="t1-title">
+                    <div class="timeline__date">15 дек</div>
+                    <div class="timeline__content">
+                        <h3 id="t1-title" class="timeline__title">Верстка макета сайта <span
+                                class="timeline__status timeline__status--completed" aria-hidden="true">✓</span></h3>
+                        <p class="timeline__description">Завершил адаптивную вёрстку и проверил кроссбраузерность.</p>
+                    </div>
+                </article>
+
+                <article class="timeline__item" data-date="10 дек" aria-labelledby="t2-title">
+                    <div class="timeline__date">10 дек</div>
+                    <div class="timeline__content">
+                        <h3 id="t2-title" class="timeline__title">JavaScript основы <span
+                                class="timeline__status timeline__status--completed" aria-hidden="true">✓</span></h3>
+                        <p class="timeline__description">Основы: DOM, события, функции и модули.</p>
+                    </div>
+                </article>
+
+                <article class="timeline__item" data-date="05 дек" aria-labelledby="t3-title">
+                    <div class="timeline__date">05 дек</div>
+                    <div class="timeline__content">
+                        <h3 id="t3-title" class="timeline__title">Работа с формами <span
+                                class="timeline__status timeline__status--in-progress" aria-hidden="true">⏳</span></h3>
+                        <p class="timeline__description">Валидация, aria-describedby и дружелюбные ошибки.</p>
+                    </div>
+                </article>
+
+                <article class="timeline__item" data-date="01 дек" aria-labelledby="t4-title">
+                    <div class="timeline__date">01 дек</div>
+                    <div class="timeline__content">
+                        <h3 id="t4-title" class="timeline__title">Адаптивная верстка <span
+                                class="timeline__status timeline__status--in-progress" aria-hidden="true">⏳</span></h3>
+                        <p class="timeline__description">Flexbox и Grid, медиазапросы для мобильных устройств.</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="container" style="display:flex; justify-content:flex-start; margin-top:1rem;">
+                <button class="button button--primary" id="open-add" aria-haspopup="dialog"
+                    aria-controls="addModal">Добавить запись</button>
+            </div>
+        </section>
+
+        <section class="container courses" aria-labelledby="courses-title" style="margin-top:3rem;">
+            <h2 id="courses-title" class="section-title">Текущие курсы</h2>
+
+            <div class="courses__grid">
+                <div class="course" role="group" aria-labelledby="course1-label">
+                    <div class="course__header">
+                        <div id="course1-label" class="course__name">Веб-разработка</div>
+                        <div class="course__percent">90%</div>
+                    </div>
+                    <div class="course__progress" aria-hidden="true">
+                        <div class="course__progress-bar" style="width:90%;" role="progressbar" aria-valuemin="0"
+                            aria-valuemax="100" aria-valuenow="90" aria-label="Прогресс по веб-разработке 90 процентов">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course" role="group" aria-labelledby="course2-label">
+                    <div class="course__header">
+                        <div id="course2-label" class="course__name">JavaScript</div>
+                        <div class="course__percent">70%</div>
+                    </div>
+                    <div class="course__progress" aria-hidden="true">
+                        <div class="course__progress-bar" style="width:70%;" role="progressbar" aria-valuemin="0"
+                            aria-valuemax="100" aria-valuenow="70" aria-label="Прогресс по JavaScript 70 процентов">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course" role="group" aria-labelledby="course3-label">
+                    <div class="course__header">
+                        <div id="course3-label" class="course__name">React</div>
+                        <div class="course__percent">50%</div>
+                    </div>
+                    <div class="course__progress" aria-hidden="true">
+                        <div class="course__progress-bar" style="width:50%;" role="progressbar" aria-valuemin="0"
+                            aria-valuemax="100" aria-valuenow="50" aria-label="Прогресс по React 50 процентов"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container footer__content">
+            <p class="footer__copyright">© 2025 Мой учебный прогресс</p>
+            <nav class="footer__links" aria-label="Ссылки футера">
+                <a class="footer__link" href="#">Политика</a>
+                <a class="footer__link" href="#">Контакты</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Accessible modal dialog -->
+    <div id="addModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="addModalTitle">
+        <div class="modal__overlay" tabindex="-1"></div>
+        <div class="modal__panel" role="document">
+            <header class="modal__header">
+                <h3 id="addModalTitle">Добавить запись</h3>
+                <button class="button" id="close-add" aria-label="Закрыть диалог">&times;</button>
+            </header>
+            <form id="addForm" class="add-entry" novalidate>
+                <div class="form-group">
+                    <label for="entryDate" class="form-label">Дата</label>
+                    <input id="entryDate" class="form-input" type="text" placeholder="например, 22 мая" required>
+                </div>
+                <div class="form-group">
+                    <label for="entryTitle" class="form-label">Заголовок</label>
+                    <input id="entryTitle" class="form-input" type="text" placeholder="Краткое название" required>
+                </div>
+                <div class="form-group">
+                    <label for="entryDesc" class="form-label">Описание</label>
+                    <textarea id="entryDesc" class="form-textarea" placeholder="Краткое описание" required></textarea>
+                </div>
+                <div style="display:flex; gap:0.5rem; margin-top:1rem;">
+                    <button type="submit" class="button button--primary">Добавить</button>
+                    <button type="button" id="cancel-add" class="button button--outline">Отмена</button>
+                </div>
+                <div id="formStatus" class="visually-hidden" aria-live="polite"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/diary.js" defer></script>
+</body>
+
+</html>

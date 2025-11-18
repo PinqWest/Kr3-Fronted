@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/ptoject.css">
+    <title>Мои проекты</title>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index_dop.html" class="nav__link">Главная</a></li>
+                <li class="nav__item nav__item--active"><a href="projects.html" class="nav__link">Проекты</a></li>
+                <li class="nav__item"><a href="diary.html" class="nav__link">Дневник</a></li>
+                <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                <li class="nav__item"><a href="izo.html" class="nav__link">Изображение</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="main">
+        <div class="container">
+
+            <div class="section-title">
+                <h1>Мои проекты</h1>
+            </div>
+
+            <!-- PROJECTS GRID -->
+            <div class="projects-grid">
+
+                <!-- Project Card -->
+                <div class="project-card" data-project="1">
+                    <img src="../images/project-1.png" class="project-img" alt="">
+                    <h3 class="project-name">Сайт онлайн заказа </h3>
+                    <div class="project-card__tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">C# .NET MVC</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="2">
+                    <img src="../images/project-2.png" class="project-img" alt="">
+                    <h3 class="project-name">Интернет-магазин (React + Node.js)</h3>
+                </div>
+
+                <div class="project-card" data-project="3">
+                    <img src="../images/project-3.png" class="project-img" alt="">
+                    <h3 class="project-name">Телеграм-бот (Python Aiogram)</h3>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+        <div class="modal__content">
+            <span id="closeModal" class="modal__close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalText"></p>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p class="footer__copyright">&copy; 2025 StudentDev Portfolio</p>
+                <div class="footer__links">
+                    <a href="mailto:student@edu.ru" class="footer__link">student@edu.ru</a>
+                    <a href="https://github.com" class="footer__link">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>

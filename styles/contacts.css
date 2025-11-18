@@ -1,0 +1,260 @@
+/* Базовые переменные и сброс */
+:root {
+  --bg: #ffffff;
+  --text: #0b1220; /* тёмный текст для контраста */
+  --accent: #005bbb; /* акцент */
+  --error: #b00020;
+  --focus: 3px;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.4;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Ссылка пропуска */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 0.75rem;
+  background: #000;
+  color: #fff;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.site-header {
+  border-bottom: 1px solid #e6eef8;
+  padding: 1rem 0;
+}
+.site-title {
+  margin: 0;
+  font-size: 1.25rem;
+}
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+}
+.main-nav a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.main-nav a:focus {
+  outline: var(--focus) solid var(--accent);
+  outline-offset: 2px;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+.lead {
+  margin-top: 0;
+}
+
+.navbar {
+  background: #2563eb;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.7rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Меню */
+.navbar__menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.navbar__menu a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.navbar__menu a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.navbar__menu .active {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* — Гамбургер — */
+.navbar__toggle {
+  display: none;
+  width: 32px;
+  height: 22px;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar__toggle span {
+  display: block;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* Визуально скрытый текст для скринридеров */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+form {
+  background: #fbfdff;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e6eef8;
+}
+fieldset {
+  border: 1px solid #dbeafc;
+  padding: 1rem;
+  margin: 0 0 1rem;
+  border-radius: 6px;
+}
+legend {
+  font-weight: 600;
+  padding: 0 0.25rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+}
+.form-row label {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="tel"],
+.form-row textarea {
+  padding: 0.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* Фокус для клавиатуры */
+.form-row input:focus,
+.form-row textarea:focus,
+.main-nav a:focus,
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 var(--focus) rgba(0, 91, 187, 0.25);
+  border-color: var(--accent);
+}
+
+.required-indicator {
+  color: var(--error);
+  font-weight: 700;
+}
+.error-text {
+  color: var(--error);
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+  min-height: 1.2em;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+button {
+  padding: 0.6rem 0.9rem;
+  border-radius: 6px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+button#reset-btn {
+  background: #f3f4f6;
+  color: #111;
+}
+button:focus {
+  box-shadow: 0 0 0 var(--focus) rgba(0, 91, 187, 0.25);
+}
+
+/* Контраст и размеров шрифта соблюдены */
+
+/* Удобный порядок фокуса: естественный DOM-порядок. */
+
+/* Адаптив */
+@media (min-width: 700px) {
+  .form-row {
+    flex-direction: row;
+    align-items: center;
+  }
+  .form-row label {
+    width: 220px;
+    margin-bottom: 0;
+  }
+  .form-row input,
+  .form-row textarea {
+    flex: 1;
+  }
+}
